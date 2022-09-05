@@ -47,3 +47,5 @@ b) Uma matriz M2 cujos elementos serão as diferenças dos elementos de mesma po
 
 
 10) Crie um programa que receba valores do usuário para preencher uma matriz 3X3, e em seguida, exiba a soma dos valores dela e a soma dos valores da primeira diagonal, ou seja, diagonal principal.
+
+11) O usuário digitará sua idade e o programa deverá printar o ano em que ele nasceu.

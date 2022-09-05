@@ -6,10 +6,14 @@ const idade = Number(prompt(`Digite a sua idade: `))
 
 const fezAniversario = prompt(`Você já fez aniversário esse ano? (s/n)`)
 
-if (converteSOuNParaBoolean(fezAniversario)) {
-    console.log(`O ano de nascimento é: ${anoAtual - idade}`)
-} else {
-    console.log(`O ano de nascimento é: ${(anoAtual - idade) - 1}`)
+try {
+    if (converteSOuNParaBoolean(fezAniversario)) {
+        console.log(`O ano de nascimento é: ${anoAtual - idade}`)
+    } else {
+        console.log(`O ano de nascimento é: ${(anoAtual - idade) - 1}`)
+    }
+} catch (e) {
+    console.log(e.message)
 }
 
 function converteSOuNParaBoolean(sOuN) {
@@ -19,6 +23,8 @@ function converteSOuNParaBoolean(sOuN) {
             valorRetornado = true
         else if (sOuN == "n")
             valorRetornado = false
+        else 
+            throw new Error ()
 
         return valorRetornado
 }

@@ -1,21 +1,34 @@
 export abstract class Animal {
 
     protected nome: String
-    private idade: Number
-    private emiteSom: Boolean = true
+    protected idade: Number
+    protected emiteSom: Boolean = true
 
-    constructor (
+    constructor(
         nome: String,
-        idade: Number,
-        emiteSom: Boolean = true
+        idade: Number
     ) {
         this.nome = nome
         this.idade = idade
-        this.emiteSom = emiteSom
     }
 
     abstract emitindoSom(): void
 
     abstract locomovendo(): void
 
+    public getNome() {
+        return this.nome
+    }
+
+    public getIdade() {
+        return this.idade
+    }
+
+    public getEmiteSom() {
+        return this.emiteSom
+    }
+
+    protected gerarAcaoRandomica(quantidadeAcoes: number): Number {
+        return Math.floor(Math.random() * quantidadeAcoes) + 1
+    }
 }

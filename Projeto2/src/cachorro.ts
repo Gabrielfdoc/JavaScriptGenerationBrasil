@@ -4,7 +4,7 @@ export class Cachorro extends Animal {
 
     override emitindoSom() {
         console.log("")
-        let som = Math.floor(Math.random() * 3) + 1
+        let som = this.gerarAcaoRandomica(3)
         
         if (som = 1) {
             console.log(`${this.nome} está latindo!`)
@@ -18,11 +18,11 @@ export class Cachorro extends Animal {
 
     override locomovendo() {
         console.log("")
-        let locomover = Math.floor(Math.random() * 3) + 1
+        let locomover = this.gerarAcaoRandomica(3)
         
-        if (locomover = 1) {
+        if (locomover === 1) {
             console.log(`${this.nome} está correndo!`)
-        } else if (locomover = 2) {
+        } else if (locomover === 2) {
             console.log(`${this.nome} está parado(E te olhando com um olhar de quem parece te julgar eu diria).`)
         } else {
             console.log(`${this.nome} está caminhando tranquilamente(Com uma passada bem estilosa)!`)
@@ -31,7 +31,7 @@ export class Cachorro extends Animal {
     }
 
     override toString(): String {
-        return "Nome: $nome\n" +
-                "Idade: $idade\n"
+        return `Nome: ${this.nome}\n` +
+            `Idade: ${this.idade}\n`
     }
 }

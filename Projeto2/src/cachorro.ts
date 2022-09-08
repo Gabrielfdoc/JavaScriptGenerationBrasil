@@ -6,9 +6,9 @@ export class Cachorro extends Animal {
         console.log("")
         let som = this.gerarAcaoRandomica(3)
         
-        if (som = 1) {
+        if (som === 1) {
             console.log(`${this.nome} está latindo!`)
-        } else if (som = 2) {
+        } else if (som === 2) {
             console.log(`${this.nome} está rosnando(Apenas sorria e acene).`)
         } else {
             console.log(`${this.nome} está absorto em silêncio contemplando mais uma de suas crises existenciais.`)
